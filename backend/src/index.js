@@ -8,7 +8,7 @@ const swaggerDocs = require('./swagger.json');
 
 mongoose.connect('mongodb+srv://default:ol0VITgkIpbjjgLq@desafiogama.glf2b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(cors());
