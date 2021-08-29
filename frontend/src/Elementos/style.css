@@ -1,0 +1,111 @@
+
+body{
+    background-color: #8EFE00;
+    color:#3B0057;
+    overflow:scroll;
+}
+h1{
+    font-family: 'Orbitron', sans-serif;
+    padding: 0 1.3rem 0 1.3rem;
+}
+.material-icons{
+    padding: 0 1.3rem 0 1.3rem;
+}
+.title{
+    color:#3B0057;
+}
+ul{
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    font-family: 'Homenaje', sans-serif;
+    font-size:1.5rem;
+    padding:1rem;
+    color:#3B0057;
+}
+.material-icons{
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+
+}
+.ExternalMenu{
+    position: sticky;
+    background-color: #8EFE00;
+    top:0;
+    display:flex;
+    align-items: center;
+    margin:0;
+    justify-content:space-between;
+    width: 100vw;
+    height: 14vh;
+    z-index: 1;
+}
+.InternalMenu{
+    display:flex;
+    top:0;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #8EFE00;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+.waveMenu{
+    position: absolute;
+    top:0;
+    z-index: 3;
+    padding:0;
+    margin: 0;
+    width: 100vw;
+    height: 30vh;
+}
+@media (min-height:600px) and (min-width:600px) {
+    .ExternalMenu{
+        height: 15vh;
+    }
+    h1{
+        font-family: 'Orbitron', sans-serif;
+        padding: 0 2rem 0 2rem;
+        font-size: 3rem;
+    }
+}
+@media (min-width:800px) {
+    .InternalMenu{
+        display:flex;
+        top:0;
+        height: 15vh;
+        position: sticky;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between;
+        text-align: center;
+        background-color: #8EFE00;
+        z-index: 1;
+    }
+    .itens{
+        display: flex;
+        align-items: center;
+    }
+    .Ul{
+        padding:0;
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end;
+        /* justify-content: space-between; */
+    }
+    .waveMenu{
+        display:none;
+    }
+}

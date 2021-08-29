@@ -1,0 +1,101 @@
+html, select { font-family:'Homenaje', sans-serif; }
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem;
+    font-family: 'Homenaje', sans-serif;
+}
+label{
+    display: block;
+    padding:0.3rem;
+    font-family: 'Homenaje', sans-serif;
+    font-weight:lighter;
+    font-size:1.4rem;
+} 
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    border:none;
+    /* border:dotted;
+    border-radius: 3%; */
+    margin:0 4vw 0 4vw;
+    padding: 3vh 5vw 3vh 5vw;
+}
+h2{
+    text-align: center;
+    font-family: 'Homenaje', sans-serif;
+    font-weight:lighter;
+    padding:0.3rem 0 -0.1rem 0;
+}
+input, select{
+    border:none;
+    font-family: 'Homenaje', sans-serif;
+    border-bottom: 0.2rem dotted #3B0057;
+    min-width: 16rem;
+    font-size: 1.3rem;
+    height:1.4rem;
+    text-align: left;
+    color:#3B0057;
+    background-color: #8EFE00;
+}
+select{
+    font-size: 1rem;
+}
+.select-selected:after {
+    font-family: 'Homenaje', sans-serif;
+}
+:disabled{
+    background-color: #00fe484b;
+}
+.react-switch{
+    align-self: center;
+}
+.wave{
+    /* transform: rotate(180deg); */
+    position: sticky;
+    bottom:0;
+    width: 100vw;
+    height:26vh;
+}
+.field-switch>label{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width:400px) and (max-width:780px) {
+    .field{
+        min-width: 80%;
+    }
+    label{
+        font-size: 1.3rem;
+    }
+}
+@media (min-width:800px){
+    .field{
+        min-width: 40%;
+    }
+    fieldset{
+        margin:0 4vw 0 4vw;
+        padding: 2vh 3vw 3vh 2vw;
+    }
+    label{
+        font-size: 1.4rem;
+    }
+    input,select{
+        height:2rem;
+        font-size: 1.3em;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
