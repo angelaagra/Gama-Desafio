@@ -8,7 +8,7 @@ const swaggerDocs = require('./swagger.json');
 
 mongoose.connect('mongodb+srv://default:ol0VITgkIpbjjgLq@desafiogama.glf2b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
@@ -16,6 +16,4 @@ app.use(express.json());
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 app.use('/v1',routes);
 
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`)
-});
+app.listen(port);
