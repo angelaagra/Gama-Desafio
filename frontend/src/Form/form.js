@@ -63,7 +63,7 @@ class Form extends React.Component{
     componentDidUpdate(prevProps,prevState){
         if (this.state.cpf !== prevState.cpf){
             if (this.state.cpf.length === 11){
-                axios.post('https://gamadesafio.herokuapp.com/v1/CPF',{cpf:this.state.cpf}).then((response)=>{
+                axios.post('https://angela-gamabackend.herokuapp.com/v1/CPF',{cpf:this.state.cpf}).then((response)=>{
                     if (response.status===200){
                         this.setState({
                             disabled:false,
@@ -110,7 +110,7 @@ class Form extends React.Component{
         console.log(isValidForm);
         console.log(this.state);
         if (isValidForm){
-            axios.post('https://gamadesafio.herokuapp.com/v1/save',this.state).then((response)=>{console.log(response);window.alert("Cadastro realizado")}).catch(
+            axios.post('https://angela-gamabackend.herokuapp.com/v1/save',this.state).then((response)=>{console.log(response);window.alert("Cadastro realizado")}).catch(
                 (error)=>{
                     console.log(error);
                     window.alert("O usuário já foi cadastrado ou os dados não estão adequados")
