@@ -10,7 +10,7 @@ export default
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "host": "",
+    "host": "https://angela-gamabackend.herokuapp.com/",
     "basePath": "/v1",
     "tags": [
       {
