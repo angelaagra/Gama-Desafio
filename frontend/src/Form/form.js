@@ -151,7 +151,7 @@ class Form extends React.Component{
                 </div>
                 <div className="field">
                     <label htmlFor="gender">Gênero</label>
-                    <input type="date" name="genero" disabled={this.state.disabled} value={this.state.genero} onChange={this.handleChange}/>
+                    <input type="text" name="genero" disabled={this.state.disabled} value={this.state.genero} onChange={this.handleChange}/>
                 </div>
             </fieldset>
             <h2>Informações de Contato</h2>
