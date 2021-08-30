@@ -25,7 +25,7 @@ class Form extends React.Component{
             prof : "",
             cel : "",
             tel : "",
-            genero : "",
+            genero : "Prefiro não declarar",
             rg : "",
             cnh : false,
             temCarro :false,
@@ -63,7 +63,7 @@ class Form extends React.Component{
     componentDidUpdate(prevProps,prevState){
         if (this.state.cpf !== prevState.cpf){
             if (this.state.cpf.length === 11){
-                axios.post('https://gamadesafio.herokuapp.com/v1/CPF',{cpf:this.state.cpf}).then((response)=>{
+                axios.post('https://angela-gamabackend.herokuapp.com/v1/CPF',{cpf:this.state.cpf}).then((response)=>{
                     if (response.status===200){
                         this.setState({
                             disabled:false,
@@ -110,7 +110,7 @@ class Form extends React.Component{
         console.log(isValidForm);
         console.log(this.state);
         if (isValidForm){
-            axios.post('https://gamadesafio.herokuapp.com/v1/save',this.state).then((response)=>{console.log(response);window.alert("Cadastro realizado")}).catch(
+            axios.post('https://angela-gamabackend.herokuapp.com/v1/save',this.state).then((response)=>{console.log(response);window.alert("Cadastro realizado")}).catch(
                 (error)=>{
                     console.log(error);
                     window.alert("O usuário já foi cadastrado ou os dados não estão adequados")
@@ -150,16 +150,8 @@ class Form extends React.Component{
                     <input type="date" name="nasc" disabled={this.state.disabled} value={this.state.nasc} onChange={this.handleChange} />
                 </div>
                 <div className="field">
-                    <label htmlFor="gender">Gênero</label>    
-                    <select value={this.state.genero} disabled={this.state.disabled} onChange={this.handleChange}>
-                        <option selected value="Prefiro não declarar">Prefiro não declarar</option>
-                        <option value="Mulher Cis">Mulher Cis</option>
-                        <option value="Mulher trans">Mulher Trans</option>
-                        <option value="Homem Cis">Homem Cis</option>
-                        <option value="Homem trans">Homem Trans</option>
-                        <option value="Não Binário">Não Binário</option>
-                        <option value="Não Binário">Outro</option>
-                    </select>
+                    <label htmlFor="gender">Gênero</label>
+                    <input type="date" name="genero" disabled={this.state.disabled} value={this.state.genero} onChange={this.handleChange}/>
                 </div>
             </fieldset>
             <h2>Informações de Contato</h2>
