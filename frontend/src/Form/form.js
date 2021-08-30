@@ -152,13 +152,13 @@ class Form extends React.Component{
                 <div className="field">
                     <label htmlFor="gender">Gênero</label>    
                     <select value={this.state.genero} disabled={this.state.disabled} onChange={this.handleChange}>
-                        <option selected value="Prefiro não declarar">Prefiro não declarar</option>
+                        <option value="Prefiro não declarar">Prefiro não declarar</option>
                         <option value="Mulher Cis">Mulher Cis</option>
                         <option value="Mulher trans">Mulher Trans</option>
                         <option value="Homem Cis">Homem Cis</option>
                         <option value="Homem trans">Homem Trans</option>
                         <option value="Não Binário">Não Binário</option>
-                        <option value="Não Binário">Outro</option>
+                        <option value="Outro">Outro</option>
                     </select>
                 </div>
             </fieldset>
