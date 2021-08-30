@@ -25,7 +25,7 @@ class Form extends React.Component{
             prof : "",
             cel : "",
             tel : "",
-            genero : "",
+            genero : "Prefiro não declarar",
             rg : "",
             cnh : false,
             temCarro :false,
