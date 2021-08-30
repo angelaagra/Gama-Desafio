@@ -150,16 +150,8 @@ class Form extends React.Component{
                     <input type="date" name="nasc" disabled={this.state.disabled} value={this.state.nasc} onChange={this.handleChange} />
                 </div>
                 <div className="field">
-                    <label htmlFor="gender">Gênero</label>    
-                    <select value={this.state.genero} disabled={this.state.disabled} onChange={this.handleChange}>
-                        <option value="Prefiro não declarar">Prefiro não declarar</option>
-                        <option value="Mulher Cis">Mulher Cis</option>
-                        <option value="Mulher trans">Mulher Trans</option>
-                        <option value="Homem Cis">Homem Cis</option>
-                        <option value="Homem trans">Homem Trans</option>
-                        <option value="Não Binário">Não Binário</option>
-                        <option value="Outro">Outro</option>
-                    </select>
+                    <label htmlFor="gender">Gênero</label>
+                    <input type="date" name="genero" disabled={this.state.disabled} value={this.state.genero} onChange={this.handleChange}/>
                 </div>
             </fieldset>
             <h2>Informações de Contato</h2>
