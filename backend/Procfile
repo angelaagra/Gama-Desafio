@@ -1,1 +1,1 @@
-web:npm run backend/index.js
+web:node index.js

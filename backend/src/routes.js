@@ -1,6 +1,6 @@
-import { Router } from "express";
-import UserCPF from "./controllers/cpf";
-import UserController  from "./controllers/userController";
+import {Router} from 'express';
+import UserCPF from "./controllers/cpf.js";
+import UserController  from "./controllers/userController.js";
 
 
 const routes = new Router();
